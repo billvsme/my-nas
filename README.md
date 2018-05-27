@@ -6,6 +6,7 @@ lvm
 btrfs
 aria2
 samba
+filebrowser
 ```
 ## install
 ```
@@ -14,4 +15,6 @@ sudo cp aria2/aria2.conf /etc/aria2/
 sudo touch /etc/aria2/aria2.session
 sudo mkdir -p /root/.cache/aria2/
 git clone --depth=1 https://github.com/ziahamza/webui-aria2
+
+wget -qO- https://filebrowser.github.io/get.sh | bash
 ```
