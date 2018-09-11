@@ -2,9 +2,11 @@
 my nas init and manager scripts
 ## tools
 ```
+smartmontools, gsmartcontrol  # 硬盘smart信息查看
 btrfs  # 磁盘文件格式
 aria2  # 下载工具
 webui-aria2  # aria2 网页界面
+transmission, transmission-web-control  # 下载工具
 samba  # smb服务器, 配合电视的kodi
 netatalk  # 苹果的afp共享, 用来Time Machine备份 
 filebrowser  # 网页管理电脑的文件
@@ -21,6 +23,12 @@ sudo apt-get install aria2
 sudo cp aria2/aria2.conf /etc/aria2/
 sudo touch /etc/aria2/aria2.session
 sudo mkdir -p /root/.cache/aria2/
+
+transmission-web-control
+sudo apt-get install transmission-daemon
+sudo vim /etc/transmission-daemon/settings.json  # rpc-username, rpc-password, rpc-whitelist 
+wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh
+sudo bash ./install-tr-control-cn.sh
 
 webui-aria2
 git clone --depth=1 https://github.com/ziahamza/webui-aria2
